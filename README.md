@@ -1,30 +1,3 @@
-
-
-
-
-
-
-## Descripción del Proyecto
-
-Este proyecto es un análisis individual realizado en el rol de Analista de Datos. Mi objetivo fue examinar y mejorar la infraestructura de acceso a internet en diferentes localidades, utilizando un conjunto de datasets que incluye métricas de velocidad de conexión, tecnologías de acceso, y características demográficas.
-
-## Comenzando
-
-### Rol de Analista de Datos
-
-Como Analista de Datos en este proyecto, mi rol incluyó:
-
-Recolección y preparación de datos.
-Análisis exploratorio para identificar tendencias y patrones.
-Creación de KPIs para medir el rendimiento y las áreas de mejora.
-Desarrollo de visualizaciones interactivas para presentar los hallazgos y recomendaciones.
-
-### Contexto del Proyecto
-
-El proyecto se centra en evaluar la disponibilidad y calidad del acceso a internet a través de diferentes tecnologías (como ADSL, Fibra Óptica, etc.) en varias localidades. La meta es identificar áreas que requieren mejoras en la infraestructura y medir el impacto de las estrategias implementadas.
-
-------------------
-
 # Proyecto de Análisis de Datos de Acceso a Internet 'PIDA' Cristian Moreira
 
 ![Imagen del Proyecto](imagenes/ElitianTelec.png)
