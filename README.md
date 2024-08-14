@@ -1,14 +1,14 @@
-# Proyecto de Análisis de Datos de Acceso a Internet 'PIDA' Cristian Moreira
+# Proyecto de Análisis de Datos 'PIDA' Cristian Moreira para Henry.
 
 ![Imagen del Proyecto](imagenes/ElitianTelec.png)
 
 ## Descripción del Proyecto
 
-Este proyecto individual de análisis de datos fue realizado en mi rol como **Data Analyst**. Mi tarea principal fue analizar datos relacionados con el acceso a internet en diferentes localidades, utilizando varias métricas y KPIs para evaluar la cobertura y la equidad en la distribución de servicios de internet. El análisis se centró en identificar áreas de mejora en la infraestructura y proponer estrategias para optimizar el acceso a internet en distintas regiones.
+Este proyecto fue realizado en mi rol como **Data Analyst**. Mi tarea principal fue analizar datos relacionados con el acceso a internet en diferentes localidades, utilizando varias métricas y KPIs para evaluar la cobertura y la equidad en la distribución de servicios de internet. Mi análisis se centró en identificar áreas de mejora en la infraestructura y proponer estrategias para optimizar el acceso a internet en distintas regiones.
 
 ## Contexto del Proyecto
 
-El objetivo principal del proyecto es analizar el acceso a internet en diversas localidades y medir la efectividad de las políticas actuales mediante indicadores clave de rendimiento (KPIs). Los KPIs que se han definido son los siguientes:
+El objetivo principal del proyecto es analizar el acceso a internet en diversas localidades y medir la efectividad de la compañía sobre las políticas actuales mediante indicadores clave de rendimiento (KPIs). Los KPIs que se definió fueron los siguientes:
 
 1. **Incrementar el Acceso a Internet por 2% por cada 100 Hogares**:
    - Este KPI mide el aumento en el acceso a internet por cada 100 hogares en cada provincia. Se calcula con la fórmula:
@@ -27,7 +27,7 @@ El objetivo principal del proyecto es analizar el acceso a internet en diversas 
 
 ## Estructura del Proyecto
 
-La estructura del proyecto en GitHub se organiza en las siguientes carpetas y archivos:
+La estructura del proyecto en GitHub está organizado en las siguientes carpetas y archivos:
 
 - **`/dashboards`**: Archivos de los dashboards utilizados para visualizar los KPIs y el análisis.
   - `PresentacionPIDA-Henry-CM.pbix`: Archivo de PowerBI con las visualizaciones y KPIs.
@@ -63,6 +63,6 @@ Cada KPI se visualiza y mide a través de gráficos específicos en PowerBI y Ju
 
 ## Conclusión
 
-Este proyecto proporciona una visión integral del acceso a internet en diferentes localidades y ayuda a identificar áreas críticas que requieren atención para mejorar la infraestructura y asegurar un acceso equitativo a todas las tecnologías de internet.
+Este proyecto intenta proporcionar una visión integral del acceso a internet en diferentes localidades y ayuda a identificar áreas críticas que requieren atención para mejorar la infraestructura y asegurar un acceso equitativo a todas las tecnologías de internet.
 
-Para más detalles, consulta los informes y dashboards incluidos en el repositorio.
+Gracias por tu tiempo de lectura.
