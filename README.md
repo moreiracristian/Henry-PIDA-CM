@@ -1,68 +1,134 @@
-# Proyecto de Análisis de Datos 'PIDA' Cristian Moreira para Henry.
+# Análisis de Acceso a Internet en Argentina — PIDA
 
-![Imagen del Proyecto](imagenes/ElitianTelec.png)
+![Banner del proyecto](imagenes/ElitianTelec.png)
 
-## Descripción del Proyecto
+**Proyecto Individual de Análisis de Datos** desarrollado en el bootcamp [Henry](https://www.soyhenry.com/) en el rol de Data Analyst.
 
-Este proyecto fue realizado en mi rol como **Data Analyst**. Mi tarea principal fue analizar datos relacionados con el acceso a internet en diferentes localidades, utilizando varias métricas y KPIs para evaluar la cobertura y la equidad en la distribución de servicios de internet. Mi análisis se centró en identificar áreas de mejora en la infraestructura y proponer estrategias para optimizar el acceso a internet en distintas regiones.
+---
 
-## Contexto del Proyecto
+## Descripción
 
-El objetivo principal del proyecto es analizar el acceso a internet en diversas localidades y medir la efectividad de la compañía sobre las políticas actuales mediante indicadores clave de rendimiento (KPIs). Los KPIs que se definió fueron los siguientes:
+Este proyecto analiza el estado del acceso a internet en Argentina utilizando datos oficiales del **ENACOM** (Ente Nacional de Comunicaciones). El objetivo es medir la cobertura, calidad y equidad en la distribución de servicios de internet a través de KPIs accionables, e identificar oportunidades de mejora en la infraestructura por provincia y localidad.
 
-1. **Incrementar el Acceso a Internet por 2% por cada 100 Hogares**:
-   - Este KPI mide el aumento en el acceso a internet por cada 100 hogares en cada provincia. Se calcula con la fórmula:
-     \[
-     \text{KPI} = \left(\frac{\text{Nuevo Acceso} - \text{Acceso Actual}}{\text{Acceso Actual}}\right) \times 100
-     \]
-   - **Objetivo**: Incrementar el acceso a internet en un 2% por cada 100 hogares para el próximo trimestre.
+---
 
-2. **Reducción de la Variabilidad de Velocidad entre Clusters**:
-   - Este KPI se enfoca en reducir la variabilidad de la velocidad promedio de internet entre diferentes clusters dentro de una provincia o partido. Se pretende identificar y minimizar las diferencias significativas en la calidad del acceso a internet dentro de las áreas agrupadas.
-   - **Objetivo**: Identificar y reducir áreas con alta variabilidad en la velocidad de internet para mejorar la consistencia de la infraestructura.
+## Stack tecnológico
 
-3. **Acceso Equitativo a Internet por Tecnología**:
-   - Este KPI mide la distribución del acceso a diferentes tecnologías de internet (ADSL, Cablemodem, Fibra Óptica, Wireless, etc.) en relación con la población y la ubicación geográfica. El objetivo es identificar desigualdades en la distribución tecnológica y proponer mejoras en la infraestructura.
-   - **Objetivo**: Asegurar que todas las localidades tengan acceso equitativo a tecnologías avanzadas de internet.
+| Herramienta | Uso |
+|---|---|
+| Python 3.11 | ETL, EDA y cálculo de KPIs |
+| Pandas / NumPy | Manipulación de datos |
+| Matplotlib / Seaborn | Visualizaciones exploratorias |
+| Scikit-learn | Clustering K-Means |
+| GeoPandas / Folium | Análisis y visualización geoespacial |
+| Power BI | Dashboard interactivo |
+| Jupyter Notebooks | Documentación del análisis |
 
-## Estructura del Proyecto
+---
 
-La estructura del proyecto en GitHub está organizado en las siguientes carpetas y archivos:
+## KPIs definidos
 
-- **`/dashboards`**: Archivos de los dashboards utilizados para visualizar los KPIs y el análisis.
-  - `PresentacionPIDA-Henry-CM.pbix`: Archivo de PowerBI con las visualizaciones y KPIs.
-- **`/datasets`**: Contiene los archivos de datos utilizados para el análisis.
-  - `/datasets/procesado`
-  - `acceso_velocidad_y_tecnologia_con_mapa.csv, acctec_hogares_mediabajada_ingresos.csv, mapa_conectividad.csv, velocidad_promedio_zonas_similares.csv`: Archivos principales que importe y exporte para mis analisis.
-- **`/notebooks`**: Incluye los cuadernos de Jupyter con el análisis de datos.
-  - `eda_mapa.ipynb`: Análisis exploratorio de datos.
-  - `etleda_hoja1.csv`: Archivo csv que creo desde el analisis 'etleda_hoja1.ipynb'
-  - `etleda_hoja1.ipynb`: Análisis exploratorio de datos y cálculo de KPI 2 y visualización.
-  - `etleda_hoja2.ipynb`: Análisis exploratorio de datos y cálculo de KPI 3 y visualización.
-  - `etleda_kpi_henry.ipynb`: Análisis exploratorio de datos y cálculo de KPI 1 y visualización.
-- **`/pilabs2`**: Contiene los archivos del entorno virtual.
-- **`/reports`**: Carpeta vacia
-- **`/src`**: Contiene el requirements.txt
+### KPI 1 — Incremento del acceso a internet por hogar
+Mide el aumento trimestral en el acceso a internet por cada 100 hogares, por provincia.
 
+```
+KPI = ((Nuevo Acceso - Acceso Actual) / Acceso Actual) * 100
+```
 
-## Reporte de Análisis
+**Objetivo:** crecer un 2% cada trimestre.
 
-El informe de análisis se basa en los dashboards creados en PowerBI y los cuadernos de Jupyter. El análisis incluye:
+### KPI 2 — Reducción de variabilidad de velocidad entre clusters
+Identifica zonas con alta dispersión en la velocidad media de bajada, agrupando localidades por similitud mediante K-Means.
 
-- **Tendencias de Crecimiento**: Gráficos de líneas o áreas que muestran la evolución de los ingresos y el acceso a internet a lo largo del tiempo.
-- **Variabilidad de Velocidad**: Visualización de la variabilidad en la velocidad de internet entre clusters y provincias.
-- **Acceso por Tecnología**: Distribución del acceso a diferentes tecnologías de internet y su relación con la población y la ubicación geográfica.
+**Objetivo:** reducir la brecha de velocidad entre clusters dentro de cada provincia.
 
-## Funcionalidad de los KPIs
+### KPI 3 — Equidad en el acceso por tecnología
+Mide la distribución de tecnologías (ADSL, Cablemodem, Fibra Óptica, Wireless) en relación con la población y la ubicación geográfica.
 
-Cada KPI se visualiza y mide a través de gráficos específicos en PowerBI y Jupyter:
+**Objetivo:** detectar provincias con escasa penetración de tecnologías modernas y proponer mejoras de infraestructura.
 
-1. **Incremento del Acceso a Internet**: Muestra el porcentaje de aumento esperado en el acceso a internet.
-2. **Reducción de Variabilidad de Velocidad**: Mide la consistencia de la velocidad de internet entre diferentes áreas.
-3. **Acceso Equitativo por Tecnología**: Evalúa la distribución de tecnologías de internet y propone mejoras para equilibrar el acceso.
+---
 
-## Conclusión
+## Estructura del proyecto
 
-Este proyecto intenta proporcionar una visión integral del acceso a internet en diferentes localidades y ayuda a identificar áreas críticas que requieren atención para mejorar la infraestructura y asegurar un acceso equitativo a todas las tecnologías de internet.
+```
+Henry-PIDA-CM/
+├── datasets/
+│   ├── Internet.xlsx
+│   ├── Telefonia_movil.xlsx
+│   ├── telefonia_fija.xlsx
+│   ├── Television.xlsx
+│   ├── Portabilidad.xlsx
+│   ├── servicios_postales.xlsx
+│   ├── mapa_conectividad.xlsx
+│   └── procesado/              ← CSVs generados por los notebooks
+├── notebooks/
+│   ├── etleda_kpi_henry.ipynb  ← ETL + EDA + KPI 1
+│   ├── etleda_hoja1.ipynb      ← ETL + EDA + KPI 2
+│   ├── etleda_hoja2.ipynb      ← ETL + EDA + KPI 3
+│   └── eda_mapa.ipynb          ← Análisis geoespacial
+├── dashboard/
+│   └── PresentacionPIDA-Henry-CM.pbix
+├── imagenes/
+├── src/
+│   └── requirements.txt
+└── README.md
+```
 
-Gracias por tu tiempo de lectura.
+---
+
+## Cómo ejecutar el proyecto
+
+**1. Clonar el repositorio**
+```bash
+git clone https://github.com/moreiracristian/Henry-PIDA-CM.git
+cd Henry-PIDA-CM
+```
+
+**2. Crear y activar un entorno virtual**
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+```
+
+**3. Instalar dependencias**
+```bash
+pip install -r requirements.txt
+```
+
+**4. Ejecutar los notebooks en este orden**
+```
+1. notebooks/etleda_kpi_henry.ipynb   → genera acctec_hogares_mediabajada_ingresos.csv
+2. notebooks/etleda_hoja1.ipynb       → genera velocidad_promedio_zonas_similares.csv
+3. notebooks/etleda_hoja2.ipynb       → genera acceso_velocidad_y_tecnologia_con_mapa.csv
+4. notebooks/eda_mapa.ipynb           → análisis geoespacial (requiere mapa_conectividad.csv)
+```
+
+**5. Dashboard**
+Abrir `dashboard/PresentacionPIDA-Henry-CM.pbix` con Power BI Desktop.
+
+---
+
+## Fuente de datos
+
+Todos los datasets provienen del portal de datos abiertos del **ENACOM**:
+[https://indicadores.enacom.gob.ar/datos-abiertos](https://indicadores.enacom.gob.ar/datos-abiertos)
+
+---
+
+## Hallazgos principales
+
+- El acceso a internet por hogar creció de forma sostenida entre 2014 y 2024, con una aceleración marcada a partir de 2020 (pandemia).
+- Existe una alta variabilidad en la velocidad media de bajada entre provincias del interior y el área metropolitana de Buenos Aires.
+- La tecnología ADSL muestra una tendencia decreciente, mientras que Cablemodem y Fibra Óptica ganan participación. Sin embargo, muchas provincias aún dependen mayoritariamente de tecnologías legacy.
+- Las localidades con menor densidad poblacional presentan las mayores brechas de conectividad y acceso a tecnologías modernas.
+
+---
+
+## Autor
+
+**Cristian Moreira**
+[GitHub](https://github.com/moreiracristian) · [LinkedIn](https://www.linkedin.com/in/moreiracristian)
